@@ -1,0 +1,41 @@
+/* ── LOGIN CSS ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #fff; }
+.navbar { background: #2c3e8c; height: 50px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; }
+.navbar .brand { color: #fff; font-size: .95rem; font-weight: 600; text-decoration: none; }
+.navbar .nav-links a { color: #fff; text-decoration: none; font-size: .88rem; margin-left: 20px; }
+.navbar .nav-links a:hover { color: #f5c518; }
+.page-body { min-height: calc(100vh - 50px); display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+.login-container { display: flex; align-items: center; gap: 80px; }
+.logo-side img { width: 280px; }
+.form-side { width: 380px; }
+.error-msg { background: #fdecea; border: 1px solid #f5c6cb; color: #a94442; padding: 10px 14px; border-radius: 6px; margin-bottom: 16px; font-size: .88rem; }
+.field-wrap { margin-bottom: 18px; }
+.field-wrap input { width: 100%; padding: 13px 16px; border: 1px solid #bbb; border-radius: 6px; font-size: .93rem; outline: none; color: #333; }
+.field-wrap input::placeholder { color: #aaa; }
+.field-wrap input:focus { border-color: #2c3e8c; box-shadow: 0 0 0 3px rgba(44,62,140,.12); }
+.field-label { display: block; font-size: .80rem; color: #555; margin-top: 5px; }
+.options-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; font-size: .87rem; }
+.options-row label { color: #333; cursor: pointer; }
+.options-row a { color: #555; text-decoration: none; }
+.btn-login { width: 160px; padding: 10px; background: #1a73e8; color: #fff; border: none; border-radius: 6px; font-size: 0.95rem; font-weight: 600; cursor: pointer; display: block; margin: 0 auto; }
+.btn-login:hover { background: #1558b0; }
+.register-link { text-align: center; margin-top: 16px; font-size: .88rem; color: #333; }
+.register-link a { color: #c0392b; font-weight: 700; text-decoration: none; }
+
+/* ── REGISTER CSS ── */
+.back-btn { display: inline-block; margin: 14px 0 0 14px; background: #c0392b; color: #fff; padding: 5px 16px; border-radius: 4px; text-decoration: none; font-size: .88rem; font-weight: 600; }
+.back-btn:hover { background: #a93226; }
+.card { background: #fff; max-width: 860px; margin: 10px auto 40px; border-radius: 10px; box-shadow: 0 2px 16px rgba(0,0,0,.10); padding: 30px 40px 40px; }
+.card h2 { text-align: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 26px; color: #111; }
+.columns { display: flex; gap: 40px; align-items: flex-start; }
+.form-col { flex: 1; }
+.img-col { width: 230px; display: flex; align-items: center; justify-content: center; padding-top: 30px; }
+.alert-error { background: #fdecea; border: 1px solid #f5c6cb; color: #a94442; padding: 10px 14px; border-radius: 6px; margin-bottom: 18px; font-size: .88rem; }
+.alert-success { background: #eafaf1; border: 1px solid #b2dfdb; color: #2e7d32; padding: 10px 14px; border-radius: 6px; margin-bottom: 18px; font-size: .88rem; }
+.field-wrap { margin-bottom: 14px; }
+.field-wrap input, .field-wrap select { width: 100%; padding: 9px 12px; border: 1px solid #ccc; border-radius: 5px; font-size: .91rem; outline: none; color: #333; background: #fff; }
+.field-wrap input:focus, .field-wrap select:focus { border-color: #2c3e8c; box-shadow: 0 0 0 3px rgba(44,62,140,.10); }
+.field-label { display: block; font-size: .78rem; color: #555; margin-top: 4px; }
+.btn-register { display: block; margin: 24px auto 0; padding: 10px 44px; background: #1a73e8; color: #fff; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+.btn-register:hover { background: #1558b0; }

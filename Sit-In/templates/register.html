@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - CCS Sit-in Monitoring System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a href="{{ url_for('login') }}" class="back-btn">Back</a>
+    <div class="card">
+        <h2>Sign up</h2>
+        {% if error %}<div class="alert-error">{{ error }}</div>{% endif %}
+        {% if success %}<div class="alert-success">{{ success }} <a href="{{ url_for('login') }}">Click here to Login</a>.</div>{% endif %}
+        <div class="columns">
+            <div class="form-col">
+                <form method="POST" action="{{ url_for('register') }}">
+                    <div class="field-wrap">
+                        <input type="text" name="id_number" required>
+                        <span class="field-label">ID Number</span>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="text" name="last_name" required>
+                        <span class="field-label">Last Name</span>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="text" name="first_name" required>
+                        <span class="field-label">First Name</span>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="text" name="middle_name">
+                        <span class="field-label">Middle Name</span>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="number" name="course_level" min="1" max="5" value="1" required>
+                        <span class="field-label">Course Level</span>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="password" name="password" required>
+                        <span class="field-label">Password</span>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="password" name="repeat_password" required>
+                        <span class="field-label">Repeat your password</span>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="email" name="email" required>
+                        <span class="field-label">Email</span>
+                    </div>
+                    <div class="field-wrap">
+                        <select name="course">
+                            <option value="BSIT">BSIT</option>
+                            <option value="BSCS">BSCS</option>
+                            <option value="BSIS">BSIS</option>
+                            <option value="ACT">ACT</option>
+                        </select>
+                        <span class="field-label">Course</span>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="text" name="address">
+                        <span class="field-label">Address</span>
+                    </div>
+                    <button type="submit" class="btn-register">Register</button>
+                </form>
+            </div>
+            <div class="img-col">
+                <svg viewBox="0 0 220 320" style="width:210px" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="112" y="28" width="95" height="162" rx="14" fill="#dce8ff" stroke="#5c7ed7" stroke-width="1.5"/>
+                    <rect x="122" y="42" width="75" height="122" rx="6" fill="#fff"/>
+                    <rect x="130" y="54" width="60" height="8" rx="3" fill="#c5cae9"/>
+                    <rect x="130" y="68" width="60" height="8" rx="3" fill="#c5cae9"/>
+                    <rect x="130" y="82" width="60" height="8" rx="3" fill="#c5cae9"/>
+                    <rect x="130" y="96" width="60" height="8" rx="3" fill="#c5cae9"/>
+                    <rect x="142" y="116" width="38" height="14" rx="5" fill="#1a73e8"/>
+                    <text x="161" y="126" text-anchor="middle" font-size="7" fill="#fff" font-family="sans-serif">Sign Up</text>
+                    <rect x="44" y="170" width="38" height="60" rx="10" fill="#f5a623"/>
+                    <circle cx="63" cy="153" r="21" fill="#ffd5b0"/>
+                    <ellipse cx="63" cy="136" rx="21" ry="9" fill="#2c2c2c"/>
+                    <path d="M82 188 Q116 172 119 132" stroke="#7986CB" stroke-width="9" fill="none" stroke-linecap="round"/>
+                    <path d="M44 188 Q28 204 32 225" stroke="#f5a623" stroke-width="9" fill="none" stroke-linecap="round"/>
+                    <rect x="44" y="226" width="15" height="48" rx="7" fill="#f5a623"/>
+                    <rect x="67" y="226" width="15" height="48" rx="7" fill="#f5a623"/>
+                    <ellipse cx="51" cy="274" rx="13" ry="6" fill="#c0392b"/>
+                    <ellipse cx="74" cy="274" rx="13" ry="6" fill="#c0392b"/>
+                    <circle cx="158" cy="218" r="4" fill="#c5cae9" opacity=".6"/>
+                    <circle cx="172" cy="230" r="3" fill="#c5cae9" opacity=".5"/>
+                    <circle cx="148" cy="233" r="2.5" fill="#c5cae9" opacity=".5"/>
+                    <path d="M138 244 Q160 254 187 244" stroke="#c5cae9" stroke-width="1.5" fill="none"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
